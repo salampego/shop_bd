@@ -2,8 +2,7 @@ const { Delivery } = require("../../models/products");
 
 const getDeliveryList = async (req, res, next) => {
   try {
-    const delivery = await Delivery.find({});
-
+    const delivery = await Delivery.find();
     res.json({
       status: "success",
       code: 200,
