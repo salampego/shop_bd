@@ -1,8 +1,9 @@
 const express = require("express");
-const { getDeliveryList } = require("../../controllers");
+const { getDeliveryList, getProductById } = require("../../controllers");
+const asyncWrapper = require("../../helpers/asyncWrapper");
 
 const router = express.Router();
 
-router.get("/", getDeliveryList);
-
+router.get("/", asyncWrapper(getDeliveryList));
+router.get("/:restrauntId", asyncWrapper(getProductById));
 module.exports = router;
