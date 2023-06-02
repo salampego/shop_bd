@@ -5,7 +5,7 @@ const deliverySchema = new mongoose.Schema({
     {
       name: { type: String },
       price: { type: Number },
-      id: { type: String },
+      photo: { type: String },
     },
   ],
   name: { type: String },

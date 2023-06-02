@@ -6,4 +6,5 @@ const router = express.Router();
 
 router.get("/", asyncWrapper(getDeliveryList));
 router.get("/:restrauntId", asyncWrapper(getProductById));
+
 module.exports = router;
