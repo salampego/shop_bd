@@ -15,4 +15,9 @@ const orderSchema = Joi.object({
   products: Joi.array().items(productSchema).required(),
 });
 
-module.exports = { orderSchema };
+const searchOrderSchema = Joi.object({
+  phone: Joi.string().required(),
+  email: Joi.string().email().required(),
+});
+
+module.exports = { orderSchema, searchOrderSchema };
