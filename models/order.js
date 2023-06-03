@@ -6,6 +6,9 @@ const orderSchema = new mongoose.Schema({
   phone: { type: String },
   email: { type: String },
   totalPrice: { type: Number },
+  date: {
+    type: Date,
+  },
   products: [
     {
       name: { type: String },

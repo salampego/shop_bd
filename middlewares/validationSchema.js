@@ -1,4 +1,4 @@
-const Joi = require("joi");
+const Joi = require("joi").extend(require("@joi/date"));
 
 const productSchema = Joi.object({
   name: Joi.string().required(),
@@ -13,11 +13,13 @@ const orderSchema = Joi.object({
   email: Joi.string().email().required(),
   totalPrice: Joi.number().required(),
   products: Joi.array().items(productSchema).required(),
+  date: Joi.date().format("DD.MM.YYYY").required(),
 });
 
 const searchOrderSchema = Joi.object({
   phone: Joi.string().required(),
   email: Joi.string().email().required(),
+  date: Joi.date().format("DD.MM.YYYY").required(),
 });
 
 module.exports = { orderSchema, searchOrderSchema };
