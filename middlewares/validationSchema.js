@@ -12,7 +12,7 @@ const orderSchema = Joi.object({
   address: Joi.string().required(),
   phone: Joi.string().required(),
   email: Joi.string().email().required(),
-  totalPrice: Joi.number().required,
+  totalPrice: Joi.number().required(),
   products: Joi.array().items(productSchema).required(),
 });
 
