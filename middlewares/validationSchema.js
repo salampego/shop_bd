@@ -19,7 +19,6 @@ const orderSchema = Joi.object({
 const searchOrderSchema = Joi.object({
   phone: Joi.string().required(),
   email: Joi.string().email().required(),
-  date: Joi.date().format("DD.MM.YYYY").required(),
 });
 
 module.exports = { orderSchema, searchOrderSchema };
