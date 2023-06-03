@@ -6,7 +6,6 @@ const productSchema = Joi.object({
   photo: Joi.string().required(),
 });
 
-// Основна схема
 const orderSchema = Joi.object({
   name: Joi.string().required(),
   address: Joi.string().required(),
