@@ -3,6 +3,7 @@ const Joi = require("joi").extend(require("@joi/date"));
 const productSchema = Joi.object({
   name: Joi.string().required(),
   price: Joi.number().required(),
+  quantity: Joi.number().required(),
   photo: Joi.string().required(),
 });
 
